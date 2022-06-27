@@ -8,7 +8,7 @@ body {
 }
 
 .Title {
-    margin: 0px 0px 1rem 50px;
+    margin: 0px 0px 1rem 0px;
     height: 1.4rem;
     color: #F0F0F0;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .Del {
-    margin: 2.4rem 0px 0rem 7px;
+    margin: 0rem 0px 0rem 7px;
     padding: 0%;
     border-radius: 25% 25% 25% 25%;
     font-weight: bold;
