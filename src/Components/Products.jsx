@@ -18,12 +18,22 @@ class Counters extends Component {
     this.setState({ counters })
   }
 
-  HandleInc = (counterId) => {
-    console.log(counterId)
+  HandleInc = (counter) => {
+    const counters = [...this.state.counters]
+    const index = counters.indexOf(counter)
+    counters[index] = { ...counter }
+    counters[index].number++;
+    this.setState({ counters })
   }
 
-  HandleDec = (counterId) => {
-    console.log(counterId)
+  HandleDec = (counter) => {
+    const counters = [...this.state.counters]
+    const index = counters.indexOf(counter)
+    counters[index] = { ...counter }
+    if (counters[index].number > 0) {
+      counters[index].number--;
+    }
+    this.setState({ counters })
   }
 
   render() {
@@ -32,7 +42,7 @@ class Counters extends Component {
       <div className="Products" s>
         {this.state.counters.map((c) => (
           <div className='Product'>
-            <Counter number={c.number} id={c.id} key={c.id} name={c.value}
+            <Counter number={c.number} id={c.id} key={c.id} name={c.value} counter={c}
               onDelete={this.HandleDelete} onInc={this.HandleInc} onDec={this.HandleDec} />
           </div>
         ))
