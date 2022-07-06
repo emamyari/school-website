@@ -12,9 +12,10 @@ class Nav extends Component {
             { name: "Headphones", svg: "M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z" }
         ],
     };
+
     render() {
         return (<nav className="Nav"><div style={{ display: 'flex', }}>
-            <img href="#" style={{ marginLeft: "1%",cursor: "pointer" }} src={require('./icon.png')} />
+            <img href="#" style={{ marginLeft: "1%", cursor: "pointer" }} src={require('./icon.png')} />
             <div className="box-input"><svg className="search-svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" /></svg>
                 <input className="input" type="text" /></div></div>
