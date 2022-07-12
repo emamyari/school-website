@@ -4,13 +4,8 @@ import Nav from "./Components/Navbar";
 
 class App extends Component {
   state = {
-    counters: [
-      { id: 1, name: "Iphone", number: 3 },
-      { id: 2, name: "Samsung", number: 1 },
-      { id: 3, name: "Huawei", number: 7 },
-      { id: 4, name: "Xiaomi", number: 9 },
-      { id: 5, name: "Sony", number: 0 },
-    ],
+      counters: [
+      ],
   };
 
   HandleDelete = (counterId) => {
@@ -36,21 +31,25 @@ class App extends Component {
     this.setState({ counters })
   }
   componentDidMount() {
-    fetch("http://192.168.1.116:7000/test/")
+
+    fetch("http://127.0.0.1:8000/gc/")
       .then(res => res.json())
       .then(
         (result) => {
-          // this.setState({ counters: [result] })
+          this.setState({ counters: result })
+          // console.log(result)
         },
         (error) => {
         }
       )
+
   }
 
+
   render() {
-    console.log(this.state.counters);
+    // console.log(this.state.counters);
     return (<div>
-      <Nav />
+      <Nav cd={this.state.counters.length} />
       <Counters counters={this.state.counters} onDelete={this.HandleDelete} onInc={this.HandleInc} onDec={this.HandleDec} />
     </div>
     );
