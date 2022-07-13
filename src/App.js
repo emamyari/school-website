@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Counters from "./Components/Products";
+import Table from "./Components/Table";
 import Nav from "./Components/Navbar";
 
 class App extends Component {
   state = {
-      counters: [
-      ],
+    counters: [
+    ],
   };
 
   HandleDelete = (counterId) => {
@@ -17,7 +18,9 @@ class App extends Component {
     const counters = [...this.state.counters]
     const index = counters.indexOf(counter)
     counters[index] = { ...counter }
-    counters[index].number++;
+    if (counters[index].number < counters[index].maximum) {
+      counters[index].number++;
+    }
     this.setState({ counters })
   }
 
@@ -25,7 +28,7 @@ class App extends Component {
     const counters = [...this.state.counters]
     const index = counters.indexOf(counter)
     counters[index] = { ...counter }
-    if (counters[index].number > 0) {
+    if (counters[index].number > 1) {
       counters[index].number--;
     }
     this.setState({ counters })
@@ -50,7 +53,10 @@ class App extends Component {
     // console.log(this.state.counters);
     return (<div>
       <Nav cd={this.state.counters.length} />
-      <Counters counters={this.state.counters} onDelete={this.HandleDelete} onInc={this.HandleInc} onDec={this.HandleDec} />
+      <div style={{ display: "flex",margin: "2rem" }}>
+        <Counters counters={this.state.counters} onDelete={this.HandleDelete} onInc={this.HandleInc} onDec={this.HandleDec} />
+        <Table counters={this.state.counters} />
+      </div>
     </div>
     );
   }
