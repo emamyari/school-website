@@ -1,0 +1,29 @@
+{
+  "categories" : [
+    {
+      "id": 1,
+      "cate_name": "طراحی",
+      "cate_link": "/"
+    },
+    {
+      "id": 2,
+      "cate_name": "مبلمان",
+      "cate_link": "/"
+    },
+    {
+      "id": 3,
+      "cate_name": "داخلی",
+      "cate_link": "/"
+    },
+    {
+      "id": 4,
+      "cate_name": "لایف استایل",
+      "cate_link": "/"
+    },
+    {
+      "id": 5,
+      "cate_name": "رسانه",
+      "cate_link": "/"
+    }
+  ]
+}

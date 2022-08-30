@@ -1,0 +1,125 @@
+/*====================
+07. Slider Style CSS
+=======================*/
+.slider {
+  &-item {
+    background-size: cover;
+    background-position: center center;
+    display: flex !important;
+    align-items: center;
+    height: 800px;
+    direction: rtl;
+
+    @media #{$md-device} {
+      height: 600px;
+    }
+
+    @media #{$sm-device} {
+      height: 500px;
+    }
+  }
+
+  &-content {
+    font-size: 16px;
+    font-weight: 500;
+    margin: auto;
+
+    @media #{$md-device,$lg-device} {
+      max-width: 575px;
+    }
+
+    @media #{$sm-device} {
+      max-width: 350px;
+    }
+
+    h2 {
+      font-size: 60px;
+      text-transform: uppercase;
+
+      @media #{$md-device,$lg-device} {
+        font-size: 45px;
+      }
+
+      @media #{$sm-device} {
+        font-size: 30px;
+
+        br {
+          display: block;
+        }
+      }
+    }
+
+    p {
+      @media #{$xl-device} {
+        max-width: 575px;
+      }
+    }
+
+    .btn {
+      margin-top: 30px;
+
+      @media #{$sm-device} {
+        margin-top: 20px;
+      }
+    }
+
+    &--2 {
+      h2 {
+        @media #{$xl-device,$lg-device} {
+          font-size: 55px;
+        }
+      }
+    }
+
+    &.light {
+      color: $white;
+
+      h2 {
+        color: $white;
+      }
+    }
+  }
+}
+
+.slider-area {
+  position: relative;
+
+  .slick-arrow {
+    color: $blackSoft;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    font-size: 70px;
+    z-index: 9;
+
+    @media #{$sm-device} {
+      font-size: 40px;
+      left: 30px;
+    }
+
+    &.slick-next {
+      left: auto;
+      right: 50px;
+
+      @media #{$sm-device} {
+        right: 30px;
+      }
+    }
+  }
+
+  .slick-dots{
+    display: flex !important;
+    position: absolute;
+    margin-top: 0;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--2{
+    .slick-arrow{
+      color: $white;
+    }
+  }
+}

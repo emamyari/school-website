@@ -1,0 +1,208 @@
+/*===========================
+4.1 - Main Navigation CSS
+=============================*/
+
+.main-menu {
+  align-content: center;
+  justify-content: flex-end;
+
+  & > li {
+    margin-left: 30px;
+    position: relative;
+
+    &:last-child {
+      margin-left: 0;
+    }
+
+    & > a {
+      color: $white;
+      display: block;
+      line-height: 1;
+      position: relative;
+
+      @media #{$lg-device} {
+        font-size: 14px;
+      }
+    }
+
+    // Sub Menu
+    &.has-submenu {
+      margin-left: 37px;
+      padding-left: 10px;
+      position: relative;
+
+      // Menu Item Arrows
+      &:after {
+        color: $white;
+        content: '\f107';
+        font-size: 16px;
+        line-height: 1;
+        font-family: $fa-icon;
+        position: absolute;
+        left: -5px;
+        top: 0;
+      }
+
+      // Sub Menu
+      .submenu-nav {
+        background-color: $white;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border-bottom: 2px solid $brandColor;
+        position: absolute;
+        right: -25px;
+        top: 100%;
+        transform: translateY(50px);
+        transition: 0.4s;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        min-width: 250px;
+        margin-top: 40px;
+        z-index: 99;
+
+        @media #{$lg-device} {
+          min-width: 220px;
+          margin-top: 38px;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          height: 40px;
+          width: 100%;
+          right: 0;
+          bottom: 100%;
+        }
+
+        & > li {
+          & > a {
+            color: $paragraph;
+            display: block;
+            font-size: 15px;
+            padding: 10px 20px;
+          }
+
+          &:hover {
+            & > a {
+              background-color: $brandColor;
+              color: $white;
+            }
+          }
+        }
+
+        // Mega Menu
+        &-mega {
+          display: flex;
+          margin-right: -300px;
+          padding: 0;
+          width: 1080px;
+
+          @media #{$lg-device} {
+            width: 960px;
+            margin-right: -245px;
+          }
+
+          .mega-menu-item {
+            border-left: 1px solid $borderColor;
+            padding: 30px;
+            flex-basis: 25%;
+
+            &:last-child {
+              border-left: 0;
+            }
+
+            & > a {
+              display: none;
+            }
+
+            ul {
+              li {
+                margin-bottom: 10px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                a {
+                  color: $paragraph;
+                  font-size: 15px;
+                  line-height: 1;
+
+                  &:hover {
+                    color: $brandColor;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // After Hover Sub Menu
+      &:hover {
+        & > .submenu-nav {
+          transform: none;
+          opacity: 1;
+          visibility: visible;
+          pointer-events: visible;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Mobile Menu */
+.res-mobile-menu {
+  background-color: $brandColor;
+  display: block !important;
+  padding: 20px 30px;
+
+  .mobile-nav{
+    li {
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+      position: relative;
+      list-style: none;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+
+      a {
+        color: $white;
+        font-size: 16px;
+        padding: 15px 0;
+        margin: 0;
+        position: relative;
+
+        &:hover {
+          color: $white;
+          background-color: transparent;
+        }
+      }
+
+      img {
+        display: none;
+      }
+
+      ul {
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        margin: 0;
+        padding-right: 10px;
+
+        li {
+
+          &.mega-menu-item{
+            & > a{
+              font-weight: 600;
+            }
+          }
+
+          a {
+            font-size: 13px;
+            color: rgba($white, 0.7);
+          }
+        }
+      }
+    }
+  }
+}

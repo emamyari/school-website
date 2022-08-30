@@ -1,0 +1,161 @@
+/*==========================
+08. About Style CSS
+==========================*/
+
+.about-content {
+  @media #{$xl-device} {
+    margin-right: 55px;
+    padding-left: 80px;
+  }
+
+  h6 {
+    margin-bottom: 13px;
+  }
+
+  .about-since {
+    color: #484848;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 30px;
+
+    @media #{$sm-device} {
+      margin-bottom: 20px;
+    }
+
+    &:after {
+      background-color: #b4b4b4;
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 2px;
+      width: 110px;
+    }
+  }
+
+  .btn-about {
+    color: $paragraph;
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 15px;
+
+    @media #{$sm-device} {
+      margin-top: 5px;
+    }
+
+    i {
+      font-size: 20px;
+      line-height: 3px;
+      vertical-align: middle;
+      transition: 0.3s;
+    }
+
+    &:hover {
+      i {
+        padding-right: 5px;
+      }
+    }
+  }
+
+  &--2{
+    @media #{$xl-device} {
+      margin-right: 0;
+      padding-left: 40px;
+    }
+  }
+}
+
+.about-thumb {
+  overflow: hidden;
+
+  @media #{$sm-device} {
+    margin-bottom: 35px;
+  }
+
+  img {
+    width: 100%;
+    transition: 0.4s;
+  }
+
+  &--2{
+    margin-left: -250px;
+  }
+}
+
+
+// Home 2 About Style
+.home-two-about-area{
+  background-color: $offWhite;
+  //background-image: url('../img/about-2-bg.jpg');
+  background-position: center left;
+  background-repeat: no-repeat;
+
+  @media #{$lg-device, $xlmax-device} {
+    background-size: 1100px auto;
+  }
+
+  @media #{$sm-device, $md-device} {
+    background-image: none !important;
+  }
+
+  .about-content{
+    padding-top: 100px;
+    padding-bottom: 110px;
+
+    @media #{$md-device} {
+      padding-top: 40px;
+      padding-bottom: 90px;
+    }
+
+    @media #{$sm-device} {
+      padding-bottom: 60px;
+      padding-top: 0;
+    }
+  }
+}
+
+.video-button-thumb{
+  position: relative;
+
+  &:after{
+    content: '';
+    background-color: $brandColor;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .btn-play{
+    border-radius: 50%;
+    background-color: $white;
+    color: $brandColor;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+    z-index: 2;
+
+    &:hover{
+      background-color: $brandColor;
+      color: $white;
+    }
+
+    i{
+      padding-right: 5px;
+    }
+  }
+}

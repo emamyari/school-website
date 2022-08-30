@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "planName": "رایگان",
+    "currencyType": "تومان",
+    "planPrice": "00",
+    "subscribePlan": "ماهیانه",
+    "planFeatures": [
+      "ویژگی 1",
+      "ویژگی 2",
+      "ویژگی 3",
+      "ویژگی 4"
+    ]
+  },
+  {
+    "id": 2,
+    "planName": "کسب و کار کوچک",
+    "currencyType": "تومان",
+    "planPrice": "49",
+    "subscribePlan": "ماهیانه",
+    "planFeatures": [
+      "ویژگی 1",
+      "ویژگی 2",
+      "ویژگی 3",
+      "ویژگی 4"
+    ]
+  },
+  {
+    "id": 3,
+    "planName": "حرفه ای",
+    "currencyType": "تومان",
+    "planPrice": "99",
+    "subscribePlan": "ماهیانه",
+    "planFeatures": [
+      "ویژگی 1",
+      "ویژگی 2",
+      "ویژگی 3",
+      "ویژگی 4"
+    ]
+  }
+]

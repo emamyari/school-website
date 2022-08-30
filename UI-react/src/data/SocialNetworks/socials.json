@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "networkName": "facebook",
+    "username": "ghaemomidi"
+  },
+  {
+    "id": 2,
+    "networkName": "twitter",
+    "username": "ghaemomidi"
+  },
+  {
+    "id": 3,
+    "networkName": "linkedin",
+    "username": "ghaemomidi"
+  },
+  {
+    "id": 4,
+    "networkName": "pinterest",
+    "username": "ghaemomidi"
+  }
+]

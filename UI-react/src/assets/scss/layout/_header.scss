@@ -1,0 +1,103 @@
+/*==========================
+04. Index Area Style CSS
+===========================*/
+
+.header-area{
+  background-color: $brandColor;
+  padding: 30px 0;
+  transition: 0.4s;
+
+  &.sticky{
+    animation: slideInDown 0.6s forwards;
+    padding: 5px 0 15px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    @media #{$sm-device, $md-device} {
+      padding: 20px 0;
+    }
+
+    .logo{
+      &-dark{
+        display: none;
+      }
+    }
+
+    .main-menu{
+      .submenu-nav{
+        margin-top: 25px;
+
+        &:before{
+          height: 25px;
+        }
+      }
+    }
+  }
+
+  &.transparent:not(.sticky){
+    background-color: transparent;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+
+    .logo{
+      &-light{
+        display: none;
+      }
+    }
+
+    .main-menu{
+      & > li{
+
+        &.has-submenu{
+          &:after{
+            color: $brandColor;
+            font-weight: 600;
+          }
+        }
+
+        & > a{
+          color: $brandColor;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .header-action{
+      a,button{
+        color: $brandColor;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+// Index Action
+.header-action{
+  color: $white;
+  font-size: 22px;
+
+  @media #{$lg-device, $sm-device} {
+    font-size: 20px;
+  }
+
+  a{
+    color: $white;
+
+    &.tel-no{
+      @media #{$xs-device} {
+        display: none;
+      }
+    }
+  }
+
+  [class*='btn-']{
+    color: $white;
+    margin-right: 20px;
+  }
+}

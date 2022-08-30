@@ -1,0 +1,102 @@
+/*==========================================
+28. Contact Page Style CSS
+===========================================*/
+.single-input-item {
+  color: $paragraph;
+  margin-bottom: 30px;
+
+  label, .custom-control-label {
+    color: $paragraph;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    position: relative;
+
+    &.required {
+      &:after {
+        content: '*';
+        color: red;
+        margin-right: 2px;
+      }
+    }
+  }
+
+  input, textarea {
+    border: 1px solid $borderColor;
+    color: $paragraph;
+    font-weight: 500;
+    display: block;
+    outline: none;
+    padding: 15px 20px;
+    transition: 0.3s;
+    width: 100%;
+
+    &:focus {
+      border-color: $brandColor;
+    }
+  }
+
+  .nice-select {
+    line-height: 30px;
+    height: 50px;
+    width: 100%;
+
+    .current {
+      color: #8d8d8d;
+      font-weight: 400;
+    }
+
+    .list {
+      font-size: 14px;
+    }
+  }
+}
+
+.contact-method {
+  h3 {
+    font-weight: 600;
+    margin-bottom: 43px;
+  }
+
+  &.contact-form-area {
+    padding: 45px 30px 45px 0;
+
+    @media #{$md-device, $sm-device} {
+      padding: 45px 30px 45px 30px;
+    }
+  }
+
+  &.contact-information {
+    background-color: $brandColor;
+    height: 100%;
+    color: $white;
+    padding: 45px 30px;
+    display: flex;
+    align-items: center;
+
+    @media #{$lg-device,$xl-device} {
+      justify-content: center;
+    }
+
+    h3 {
+      color: $white;
+    }
+
+    .member-social-icons {
+      a {
+        height: auto;
+        width: auto;
+        margin-left: 15px;
+        opacity: 0.9;
+
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.contact-content-wrap {
+  box-shadow: 0 10px 60px 0 rgba(71, 74, 182, 0.12);
+}

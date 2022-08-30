@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "title": "خانه",
+    "link": "/",
+    "megaMenu": false,
+    "subMenu": [
+      {
+        "id": 1.1,
+        "title": "خانه 1",
+        "link": "/home-one"
+      },
+      {
+        "id": 1.2,
+        "title": "خانه 2",
+        "link": "/home-two"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "درباره",
+    "link": "/about",
+    "megaMenu": false,
+    "subMenu": false
+  },
+  {
+    "id": 3,
+    "title": "خدمات",
+    "link": "/services",
+    "megaMenu": false,
+    "subMenu": false
+  },
+  {
+    "id": 4,
+    "title": "تیم",
+    "link": "/team",
+    "megaMenu": false,
+    "subMenu": false
+  },
+  {
+    "id": 5,
+    "title": "وبلاگ",
+    "link": "/blog-grid-right-sidebar",
+    "megaMenu": false,
+    "subMenu": [
+      {
+        "title": "وبلاگ شبکه ای با ستون راست",
+        "link": "/blog-grid-left-sidebar"
+      },
+      {
+        "title": "وبلاگ شبکه ای با ستون چپ",
+        "link": "/blog-grid-right-sidebar"
+      },
+      {
+        "title": "وبلاگ شبکه ای بدون ستون",
+        "link": "/blog-grid-without-sidebar"
+      },
+      {
+        "title": "وبلاگ فهرستی با ستون راست",
+        "link": "/blog-list-left-sidebar"
+      },
+      {
+        "title": "وبلاگ فهرستی با ستون چپ",
+        "link": "/blog-list-right-sidebar"
+      },
+      {
+        "title": "جزئیات وبلاگ",
+        "link": "/blog/wild-life-workshop?id=14"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "تماس",
+    "link": "/contact"
+  }
+]

@@ -1,0 +1,63 @@
+/*===========================
+--. Footer Style CSS
+===========================*/
+.footer-area,.call-top-action-wrap {
+  background-color: $offWhite;
+}
+
+.widget-item {
+  margin-top: 38px;
+
+  .widget-title {
+    color: $brandColor;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: -1px;
+    margin-bottom: 22px;
+
+    @media #{$sm-device} {
+      margin-bottom: 15px;
+    }
+  }
+
+  address {
+    line-height: 2;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+}
+
+.widget-list {
+  li {
+    line-height: 2;
+
+    a {
+      color: $paragraph;
+      font-weight: 500;
+      transition: 0.2s;
+
+      &:hover {
+        color: $brandColor;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+// About Widget
+.about-widget {
+  img {
+    max-width: 120px;
+    margin-bottom: 20px;
+  }
+}
+
+.copyright-txt {
+  margin-top: 25px;
+  font-weight: 500;
+
+  @media #{$sm-device} {
+    margin-top: 15px;
+  }
+}
