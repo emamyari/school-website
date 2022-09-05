@@ -1,39 +1,37 @@
 import React from 'react';
 import parse from 'html-react-parser'
 import SlickSlider from '../../UI/Slick'
-import SliderData from '../../../data/Slider/home-2'
-import {Link} from "react-router-dom";
+// import SliderData from '../../../data/Slider/home-2'
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
-const BaseUrl="http://127.0.0.1:8000/test4/"
-
-const NextArrow = ({className, onClick}) => {
+const NextArrow = ({ className, onClick }) => {
     return (
-        <button className={className} onClick={onClick}><i className="fa fa-angle-right"/></button>
+        <button className={className} onClick={onClick}><i className="fa fa-angle-right" /></button>
     )
 };
 
-const PrevArrow = ({className, onClick}) => {
+const PrevArrow = ({ className, onClick }) => {
     return (
-        <button className={className} onClick={onClick}><i className="fa fa-angle-left"/></button>
+        <button className={className} onClick={onClick}><i className="fa fa-angle-left" /></button>
     )
 };
+
+const BaseUrl = "http://127.0.0.1:8000/SliderData/"
+
 
 const Slider = () => {
-    const [slider,setSlider]=React.useState([])
-    
-    React.useEffect(()=>{
-        axios.get(BaseUrl).then((Response)=>{
-            console.log(Response.data)
+    const [slider, setSlider] = React.useState([])
+    React.useEffect(() => {
+        axios.get(BaseUrl).then((Response) => {
             setSlider(Response.data)
         })
-    })
-
+    })    
     const settings = {
         arrows: true,
         dots: false,
-        nextArrow: <NextArrow/>,
-        prevArrow: <PrevArrow/>,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 500,
@@ -51,7 +49,7 @@ const Slider = () => {
                     slider.map(item => (
                         <div key={item.id}>
                             <div className="slider-item"
-                                 style={{backgroundImage: `url(${require('../../../assets/img/' + item.bg)})`}}>
+                                style={{ backgroundImage: `url(${require('../../../assets/img/' + item.bg)})` }}>
                                 <div className="container">
                                     <div className="row">
                                         <div className="col-lg-10 m-auto text-center">
