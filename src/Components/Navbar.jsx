@@ -28,7 +28,7 @@ class Nav extends Component {
                         </svg>{c.name}</a>
                     </div>
                 ))}</div>
-                <a href="#" className="navbar-Cart">
+                <a href="#table" className="navbar-Cart">
                   <h6 className="navbar-Cart-value">{this.props.cd}</h6>
               </a>
         </nav>);

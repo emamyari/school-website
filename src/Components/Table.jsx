@@ -4,7 +4,7 @@ import "../components.css"
 class Table extends Component {
     state = {}
     render() {
-        return (<table className="table-Products">
+        return (<table id="table" className="table-Products">
             <tr id="t-head" className="table-Products-head">
                 <td>ID</td>
                 <td>Name</td>
