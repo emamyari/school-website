@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path
-from controller.API import TestimonialData, SliderData, AboutData, ServicesData, CallToActionData
+from controller.API import TestimonialData, SliderData, AboutData, ServicesData
+from controller.CallToActionData import CallToActionData
 
 urlpatterns = [
     path('admin/', admin.site.urls),
