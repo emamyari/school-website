@@ -3,6 +3,7 @@ from rest_framework.decorators import api_view
 from django.http import HttpResponse
 from controller.testimonia import DAO
 
+
 @api_view(['''GET'''])
 def TestimonialData(request):
     data = DAO()
