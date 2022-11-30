@@ -3,27 +3,6 @@ from rest_framework.decorators import api_view
 from django.http import HttpResponse
 
 
-@api_view(['''GET'''])
-def sg(request):
-    data = [{"id": 1,
-             "name": "A",
-             "number": 10,
-             "maximum": 15},
-            {"id": 1,
-             "name": "B",
-             "number": 10,
-             "maximum": 15},
-            {"id": 1,
-             "name": "C",
-             "number": 10,
-             "maximum": 15},
-            {"id": 1,
-             "name": "D",
-             "number": 10,
-             "maximum": 15},
-            ]
-    return HttpResponse(json.dumps(data), content_type='''application/json''')
-
 
 @api_view(['''GET'''])
 def TestimonialData(request):

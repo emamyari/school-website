@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from controller.API import TestimonialData, SliderData, AboutData, ServicesData,sg
+from controller.API import TestimonialData, SliderData, AboutData, ServicesData
 from controller.CallToActionData import CallToActionData
 
 urlpatterns = [
@@ -10,5 +10,4 @@ urlpatterns = [
     path('AboutData/', AboutData),
     path('ServicesData/', ServicesData),
     path('CallToActionData/', CallToActionData),
-    path('sg/', sg),
 ]
