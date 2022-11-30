@@ -1,8 +1,7 @@
 import json
 from rest_framework.decorators import api_view
 from django.http import HttpResponse
-from DAO.CallToAction import DAO
-
+from dao.CallToAction import DAO
 
 @api_view(['''GET'''])
 def CallToActionData(request):

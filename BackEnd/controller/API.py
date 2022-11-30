@@ -1,33 +1,11 @@
 import json
 from rest_framework.decorators import api_view
 from django.http import HttpResponse
-
+from controller.testimonia import DAO
 
 @api_view(['''GET'''])
 def TestimonialData(request):
-    data = [
-        {
-            "id": 1,
-            "quote": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
-            "author": "کاربر 1000",
-            "authorThumb": "testimonial/h-2-t-01.png",
-            "designation": "مدیر فنی فیسبوک"
-        },
-        {
-            "id": 2,
-            "quote": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
-            "author": "کاربر 2",
-            "authorThumb": "testimonial/h-2-t-02.png",
-            "designation": "موسس علی بابا"
-        },
-        {
-            "id": 3,
-            "quote": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
-            "author": "کاربر 3",
-            "authorThumb": "testimonial/h-2-t-03.png",
-            "designation": "مدیر اجرایی دیجی کالا"
-        }
-    ]
+    data = DAO()
     return HttpResponse(json.dumps(data), content_type='''application/json''')
 
 
