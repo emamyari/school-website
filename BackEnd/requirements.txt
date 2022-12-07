@@ -1,4 +1,4 @@
-Django~=4.1.1
-djangorestframework~=3.13.1
+Django
+djangorestframework
 django-cors-headers
 pyodbc
