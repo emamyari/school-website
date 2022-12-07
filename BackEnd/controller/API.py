@@ -1,12 +1,13 @@
 import json
 from rest_framework.decorators import api_view
 from django.http import HttpResponse
-from controller.testimonia import DAO
+# from controller.testimonia import DAO
 
 
 @api_view(['''GET'''])
 def TestimonialData(request):
-    data = DAO()
+    # data = DAO()
+    data = {1}
     return HttpResponse(json.dumps(data), content_type='''application/json''')
 
 
