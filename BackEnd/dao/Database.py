@@ -1,14 +1,16 @@
 import pyodbc
-from dao.Model import Products
+# from dao.Model import Products
 import os
 
-def ConnectDB(TableName):
+def ConnectDb(TableName):
+    print(str(os.getcwd()))
     conn = pyodbc.connect(
-        r"DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=" + str(os.getcwd()) + "\DB.accdb;")
+        r"DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};DBQ=" + str(os.getcwd()) + "\dao\DB.accdb;")
     cursor = conn.cursor()
     cursor.execute('SELECT * FROM ' + str(TableName))
     json = cursor.fetchall()
-    connection.close()
+    print(json)
+    conn.close()
     return json
 # import pyodbc
 #

@@ -7,7 +7,7 @@ def DAO():
     li = []
     for row in rows:
         print(row[0])
-        data = CallToAction(row[1], row[21], row[3], row[4])
+        data = CallToAction(row[1], row[2], row[3], row[4])
         data = data.__dict__
         li.append(data)
     return li
