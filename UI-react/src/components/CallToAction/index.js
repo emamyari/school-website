@@ -4,15 +4,16 @@ import parse from 'html-react-parser'
 // import CallToActionData from '../../data/CallToAction/call-to-action'
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import Response from '../../helpers/BackEnd'
 
 function CallToAction() {
-    const BaseUrl = "http://127.0.0.1:8000/CallToActionData/"
+    const BaseUrl = Response() + "CallToActionData/"
     const a = {
         "title": "",
         "text": "",
         "btnText": "",
         "btnLink": ""
-      }
+    }
     const [CallToActionData, setCallToActionData] = React.useState(a)
     React.useEffect(() => {
         axios.get(BaseUrl).then((Response) => {

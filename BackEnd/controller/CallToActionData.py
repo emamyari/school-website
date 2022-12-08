@@ -8,9 +8,6 @@ from model.CallToAction import CallToAction
 @api_view(['''GET'''])
 def CallToActionData(request):
     rows = ConnectDb('''CallToAction''')
-    li = []
     for row in rows:
         data = CallToAction(row[1], row[2], row[3], row[4])
-        data = data.__dict__
-        li.append(data)
-    return HttpResponse(json.dumps(li), content_type='application/json')
+    return HttpResponse(json.dumps(data.__dict__), content_type='application/json')
