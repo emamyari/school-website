@@ -2,7 +2,7 @@ import json
 from rest_framework.decorators import api_view
 from django.http import HttpResponse
 from controller.testimonia import DAO
-
+from controller.SliderData import MMD
 
 @api_view(['''GET'''])
 def TestimonialData(request):
@@ -12,24 +12,7 @@ def TestimonialData(request):
 
 @api_view(['''GET'''])
 def SliderData(request):
-    data = [
-        {
-            "id": 1,
-            "title": "قالب ری اکت شرکتی",
-            "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
-            "bg": "slider/h-2-01.jpg",
-            "btnText": "اطلاعات بیشتر",
-            "btnLink": "/about"
-        },
-        {
-            "id": 2,
-            "title": "پول خود را هدر ندهید",
-            "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
-            "bg": "slider/h-2-02.jpg",
-            "btnText": "اطلاعات بیشتر",
-            "btnLink": "/about"
-        }
-    ]
+    data = MMD()
     return HttpResponse(json.dumps(data), content_type='application/json')
 
 
