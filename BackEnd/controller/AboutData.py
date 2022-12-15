@@ -31,10 +31,10 @@ def ConnectDb(TableName):
 #     return rows
 
 
-def MMD():
+def About():
     rows = ConnectDb('''AboutData''')
     li = []
     for row in rows:
-        a = AboutData(row[1], row[2], row[3], row[4], row[5], row[6])
+        a = AboutData(row[1], row[2], row[3], row[4], row[5], row[6],row[7])
         li.append(a.__dict__)
     return li

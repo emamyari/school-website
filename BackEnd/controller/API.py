@@ -3,7 +3,7 @@ from rest_framework.decorators import api_view
 from django.http import HttpResponse
 from controller.testimonia import DAO
 from controller.SliderData import MMD
-
+from controller.AboutData import About
 @api_view(['''GET'''])
 def TestimonialData(request):
     data = DAO()
@@ -18,15 +18,7 @@ def SliderData(request):
 
 @api_view(['''GET'''])
 def AboutData(request):
-    data = {
-        "title": "درباره ما",
-        "heading": "ما کسب و کار شما را به یک کسب و کار حرفه ای تبدیل می کنیم",
-        "since": "از سال 1390",
-        "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
-        "btnText": "اطلاعات بیشتر",
-        "btnLink": "/about",
-        "thumb": "about-2.jpg"
-    }
+    data = About()
     return HttpResponse(json.dumps(data), content_type='application/json')
 
 
