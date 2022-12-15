@@ -1,5 +1,5 @@
 from dao.Database import ConnectDb
-from model.Slider import Slider
+from model.About import AboutData
 import pyodbc
 # from dao.Model import Products
 import os
@@ -32,9 +32,9 @@ def ConnectDb(TableName):
 
 
 def MMD():
-    rows = ConnectDb('''slider''')
+    rows = ConnectDb('''AboutData''')
     li = []
     for row in rows:
-        a = Slider(row[1], row[2], row[3], row[4], row[5])
+        a = AboutData(row[1], row[2], row[3], row[4], row[5], row[6])
         li.append(a.__dict__)
     return li
