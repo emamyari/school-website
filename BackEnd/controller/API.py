@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from controller.testimonia import DAO
 from controller.SliderData import MMD
 from controller.AboutData import About
+from controller.CallToActionData import CallToActiondata
 @api_view(['''GET'''])
 def TestimonialData(request):
     data = DAO()
@@ -127,10 +128,5 @@ def ServicesData(request):
 
 @api_view(['''GET'''])
 def CallToActionData(request):
-    data = {
-        "title": "همین امروز شروع کنید",
-        "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
-        "btnText": "تماس با ما",
-        "btnLink": "/contact"
-    }
+    data = CallToActiondata()
     return HttpResponse(json.dumps(data), content_type='application/json')

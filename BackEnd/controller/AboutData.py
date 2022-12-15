@@ -1,4 +1,3 @@
-from dao.Database import ConnectDb
 from model.About import AboutData
 import pyodbc
 # from dao.Model import Products
