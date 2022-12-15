@@ -5,10 +5,7 @@ from controller.testimonia import DAO
 from controller.SliderData import MMD
 from controller.AboutData import About
 from controller.CallToActionData import CallToActiondata
-@api_view(['''GET'''])
-def TestimonialData(request):
-    data = DAO()
-    return HttpResponse(json.dumps(data), content_type='''application/json''')
+from controller.FeaturesData import Features
 
 
 @api_view(['''GET'''])
@@ -127,6 +124,18 @@ def ServicesData(request):
 
 
 @api_view(['''GET'''])
+def FeaturesData(request):
+    data = Features()
+    return HttpResponse(json.dumps(data), content_type='application/json')
+
+
+@api_view(['''GET'''])
 def CallToActionData(request):
     data = CallToActiondata()
     return HttpResponse(json.dumps(data), content_type='application/json')
+
+
+@api_view(['''GET'''])
+def TestimonialData(request):
+    data = DAO()
+    return HttpResponse(json.dumps(data), content_type='''application/json''')
