@@ -3,11 +3,9 @@ from rest_framework.decorators import api_view
 from django.http import HttpResponse
 from controller.testimonia import DAO
 from controller.SliderData import MMD
-
-@api_view(['''GET'''])
-def TestimonialData(request):
-    data = DAO()
-    return HttpResponse(json.dumps(data), content_type='''application/json''')
+from controller.AboutData import About
+from controller.CallToActionData import CallToActiondata
+from controller.FeaturesData import Features
 
 
 @api_view(['''GET'''])
@@ -18,15 +16,7 @@ def SliderData(request):
 
 @api_view(['''GET'''])
 def AboutData(request):
-    data = {
-        "title": "درباره ما",
-        "heading": "ما کسب و کار شما را به یک کسب و کار حرفه ای تبدیل می کنیم",
-        "since": "از سال 1390",
-        "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
-        "btnText": "اطلاعات بیشتر",
-        "btnLink": "/about",
-        "thumb": "about-2.jpg"
-    }
+    data = About()
     return HttpResponse(json.dumps(data), content_type='application/json')
 
 
@@ -134,11 +124,18 @@ def ServicesData(request):
 
 
 @api_view(['''GET'''])
-def CallToActionData(request):
-    data = {
-        "title": "همین امروز شروع کنید",
-        "text": "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.",
-        "btnText": "تماس با ما",
-        "btnLink": "/contact"
-    }
+def FeaturesData(request):
+    data = Features()
     return HttpResponse(json.dumps(data), content_type='application/json')
+
+
+@api_view(['''GET'''])
+def CallToActionData(request):
+    data = CallToActiondata()
+    return HttpResponse(json.dumps(data), content_type='application/json')
+
+
+@api_view(['''GET'''])
+def TestimonialData(request):
+    data = DAO()
+    return HttpResponse(json.dumps(data), content_type='''application/json''')
