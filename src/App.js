@@ -94,7 +94,7 @@ class App extends Component {
     this.setState({ counters })
   }
   componentDidMount() {
-    fetch("http://127.0.0.1:8000/gc/")
+    fetch("http://127.0.0.1:8000/sg/")
       .then(res => res.json())
       .then(
         (Counters) => {
