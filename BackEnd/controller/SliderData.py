@@ -4,6 +4,7 @@ import pyodbc
 # from dao.Model import Products
 import os
 
+
 def ConnectDb(TableName):
     print(str(os.getcwd()))
     conn = pyodbc.connect(
@@ -14,6 +15,8 @@ def ConnectDb(TableName):
     print(json)
     conn.close()
     return json
+
+
 # import pyodbc
 #
 #
@@ -35,6 +38,6 @@ def MMD():
     rows = ConnectDb('''slider''')
     li = []
     for row in rows:
-        a = Slider(row[1], row[2], row[3], row[4], row[5])
+        a = Slider(row[0], row[1], row[2], row[3], row[4], row[5])
         li.append(a.__dict__)
     return li
