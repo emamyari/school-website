@@ -23,6 +23,8 @@ def CallToActiondata():
     rows = ConnectDb('''CallToAction''')
     li = []
     for row in rows:
+
+
         a = CallToAction(row[1], row[2], row[3], row[4])
         li.append(a.__dict__)
     return li
