@@ -1,4 +1,4 @@
-class testimonial():
+class ServicesData():
     def __init__(self, id, title, shortDesc, thumb, previewImages,aboutServiceDesc,features):
         self.id = id
         self.title = title
